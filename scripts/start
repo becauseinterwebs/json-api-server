@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+items="app config ../../lib index.js"
+
+watch=""
+for i in $items; do
+  watch="$watch --watch $i"
+done
+
+nodemon $watch index.js
