@@ -1,4 +1,4 @@
-# Base Microservice Server v1.0
+# Base JSONApi Microservice Server v1.0
 
 This project contains a base setup to build a resource-based microservice using Express and the Sequelize ORM.  After defining a few basic settings (database connectivity, table models) you will be able to start the service and have JSON-Api endpoints available.
 

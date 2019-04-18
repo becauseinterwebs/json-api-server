@@ -1,7 +1,7 @@
 {
-  "name": "base-server",
+  "name": "json-api-server",
   "version": "1.0.0",
-  "description": "Base Microservice Server",
+  "description": "Base JSONApi Microservice Server",
   "keywords": [
     "microservice",
     "sequelize",
