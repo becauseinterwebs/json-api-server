@@ -6,16 +6,17 @@ It will automatically create controllers and routes for basic CRUD and search op
 
 You can also add external service endpoints and extend classes to meet the needs of the application being developed.
 
-### Initial Setup
+## Initial Setup
 
 The process of preparing the application to run for the first time includes the following:
 
 1. Clone the repo
 2. Run npm install to install 3rd-party libraries
 3. Edit configuration files (including db connection settings)
-4. Start the application to create database tables
+4. Define your database models
+5. Start the application to create database tables
 
-##### Installing 3rd-Party Libraries
+### Installing 3rd-Party Libraries
 
 After cloning the repo, run
 
@@ -23,7 +24,7 @@ After cloning the repo, run
 
 to install the necessary 3rd-party libraries.
 
-##### Configuration Files
+### Configuration Files
 
 This application uses a system of using two configuration files, one that holds settings common to all environments as well as production settings, and another that is used by the local environment (and is not part of the repo) to overwrite settings needed for the local environment to operate correctly.
 
@@ -31,13 +32,18 @@ The main configuration file is app/config/settings.js.  This holds the settings 
 
 The env.js file holds settings that will override the corresponding entry in settings.js for the local environment.
 
-##### Env.js
+### Env.js
 Rename env.js.dist to env.js and edit the file to provide the appropriate paths, database settings, server names and keys for the environment. Basically, by the time you get to your production environment, all that should be in the env.js is database settings.
 
 ### Database Setup
 Once the database settings have been provided in env.js, you can start the application and it will create the necessary tables for you.
 
 By default, options for connecting to a mySql database are provided, but you can also provide options for sqlite or postGREs.  Please see [http://docs.sequelizejs.com/](http://docs.sequelizejs.com/) for more information on configuration options for the Sequelize ORM.
+
+### Define Table Models
+The [Sequelize ORM](https://docs.sequelizejs.com) uses JSON object to define database tables.  These objects are then used to auto-create endpoints, CRUD operations and serializers. 
+
+Define your models in the ```/models``` folder and see the [Sequelize Docs](https://docs.sequelizejs.com) for information on how to define your models.
 
 ### Running the Application
 
