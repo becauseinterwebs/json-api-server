@@ -44,7 +44,7 @@
     "request": "^2.88.0",
     "request-promise-native": "^1.0.5",
     "sequelize": "^4.38.0",
-    "sequelize-jsonapi-query": "git+ssh://git@github.com:becauseinterwebs/jsonapi-sequelize-query.git",
+    "sequelize-jsonapi-query": "git+ssh://git@github.com/becauseinterwebs/jsonapi-sequelize-query.git",
     "sqlite3": "^4.0.6"
   },
   "devDependencies": {},
