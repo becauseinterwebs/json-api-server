@@ -41,7 +41,7 @@ Once the database settings have been provided in env.js, you can start the appli
 By default, options for connecting to a mySql database are provided, but you can also provide options for sqlite or postGREs.  Please see [http://docs.sequelizejs.com/](http://docs.sequelizejs.com/) for more information on configuration options for the Sequelize ORM.
 
 ### Define Table Models
-The [Sequelize ORM](https://docs.sequelizejs.com) uses JSON object to define database tables.  These objects are then used to auto-create endpoints, CRUD operations and serializers. 
+The [Sequelize ORM](https://docs.sequelizejs.com) uses JSON objects to define database tables.  These objects are then used to auto-create endpoints, CRUD operations and serializers. 
 
 Define your models in the ```/models``` folder and see the [Sequelize Docs](https://docs.sequelizejs.com) for information on how to define your models.
 
@@ -83,8 +83,8 @@ In addition, all defined resources have the default endpoints for CRUD (and sear
 
 `DELETE /resource/:id` - Delete an existing resource
 
-#### Json-Api Searches
-Since the associations to other tables are defined in the model files, you can use the 'include' keyword in your searches to include related object.  You can also use the 'filter' and 'fields' keywords as specified in the JSON-Api specification (jsonapi.org.)
+### Json-Api Searches
+Since the associations to other tables are defined in the model files, you can use the 'include' keyword in your searches to include related objects.  You can also use the 'filter' and 'fields' keywords as specified in the JSON-Api specification (jsonapi.org.)
 
 For example if you define Table1 and it has related data in Table2, you could search like this:
 
@@ -94,17 +94,20 @@ This would give you all records in Table1 that have corresponding Table2 records
 
 www.your-service.url/Table1?include=*Table2
 
-You can also use filters and fields keyword, including dot-notation nesting:
+You can also use filters and fields keywords, including dot-notation nesting:
 
 ?filter[Table1.field1][like]=some-text&fields[Table1]=id,field1
 
 Please see the [sequelize-jsonapi-query](https://bitbucket.jwtreporting.com/projects/MT/repos/sequelize-jsonapi-query/browse) library for more information.
 
+#### Available Filter Keywords
+
+Please see the documentation for the [sequelize-jsonapi-query](https://github.com/becauseinterwebs/sequelize-jsonapi-query) library that is installed when you run ```npm install```.
 
 ### Jobs
-You can define jobs (located in the /jobs folder) that can be called by a CRON.  For example, if you have a job file name 'Locations', you could execute it by running:
+You can define jobs (located in the /jobs folder) that can be called by a CRON.  For example, if you have a job file name 'Test', you could execute it by running:
 
-    npm run job Locations
+    npm run job Test
 
 The job name must match the name of the job file (minus the .js extension.)  There is a sample job located in the /jobs folder to help get you started.
 
