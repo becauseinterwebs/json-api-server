@@ -2,3 +2,4 @@
 .DS_Store
 nbproject
 node_modules
+app/config/env.js

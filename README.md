@@ -102,7 +102,7 @@ Please see the [sequelize-jsonapi-query](https://bitbucket.jwtreporting.com/proj
 
 #### Available Filter Keywords
 
-Please see the documentation for the [sequelize-jsonapi-query](https://github.com/becauseinterwebs/sequelize-jsonapi-query) library that is installed when you run ```npm install```.
+Please see the documentation for the [jsonapi-sequelize-query](https://github.com/becauseinterwebs/jsonapi-sequelize-query) library that is installed when you run ```npm install```.
 
 ### Jobs
 You can define jobs (located in the /jobs folder) that can be called by a CRON.  For example, if you have a job file name 'Test', you could execute it by running:
